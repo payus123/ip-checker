@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.HashMap;
 
 @Component
 public class LogInterceptor extends HandlerInterceptorAdapter {

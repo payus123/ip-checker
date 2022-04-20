@@ -20,11 +20,6 @@ public class FilterController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @RequestMapping(value = { "/secure-code/public" })
-    public String pubCode() {
-
-        return "2@CLASG$(%23";
-    }
 
     @PostMapping("/whitelist")
     public  ResponseEntity<?> whitelistIP(@RequestBody IpRequest request){
