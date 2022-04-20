@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class UserCheckerServiceImpl implements UserCheckerService {
+public class IPCheckerServiceImpl implements IPCheckerService {
     private final IpCheckerRepository ipCheckerRepository;
 
 

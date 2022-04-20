@@ -14,9 +14,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
 
-/**
- * Created by oa on 6/2/2019.
- */
 @Component
 public class LogInterceptor extends HandlerInterceptorAdapter {
     private final org.slf4j.Logger Logger = LoggerFactory.getLogger(this.getClass());
@@ -32,7 +29,7 @@ public class LogInterceptor extends HandlerInterceptorAdapter {
         Logger.info("----------------LogInterceptor PreHandle(End)--------------------------");
         //responseHeader can be modified similiarly as per need
 
-        StartService.allowedIPs
+
 
         if(!StartService.allowedIPs.containsKey(request.getRemoteAddr())) {
             response.sendRedirect("/auth-failed"); //redirect to default

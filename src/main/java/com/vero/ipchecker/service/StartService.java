@@ -23,7 +23,7 @@ public class StartService {
    // @Scheduled(cron = "* 00 2 * * * ",zone = "Africa/Lagos")
 //    @Scheduled(fixedDelayString ="86400000")
    @PostConstruct
-    private void doKeyExchange(){
+    private void ipInitializer(){
 
         UserChecker userChecker = new UserChecker();
         userChecker.setId(1L);

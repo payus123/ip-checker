@@ -1,7 +1,7 @@
 package com.vero.ipchecker.controller;
 
 import com.vero.ipchecker.dtos.IpRequest;
-import com.vero.ipchecker.service.UserCheckerService;
+import com.vero.ipchecker.service.IPCheckerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequiredArgsConstructor
 public class FilterController {
-    private final UserCheckerService userCheckerService;
+    private final IPCheckerService IPCheckerService;
 
 
     @RequestMapping(value = { "/check-IP" })
@@ -28,13 +28,13 @@ public class FilterController {
 
     @PostMapping("/whitelist")
     public  ResponseEntity<?> whitelistIP(@RequestBody IpRequest request){
-            userCheckerService.whitelistIP(request);
+            IPCheckerService.whitelistIP(request);
             return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @PostMapping("/blacklist")
     public  ResponseEntity<?> blacklist(@RequestBody IpRequest request){
-        userCheckerService.blacklistIP(request);
+        IPCheckerService.blacklistIP(request);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
